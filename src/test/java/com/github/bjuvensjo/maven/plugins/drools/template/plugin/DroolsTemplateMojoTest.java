@@ -42,7 +42,7 @@ public class DroolsTemplateMojoTest {
 
         droolsTemplateMojo.execute();
 
-        File personGeneratedFile = new File(outputDir, "com/github/bjuvensjo/maven/plugins/drools/template/plugin/PersonGenerated.drl");
+        File personGeneratedFile = new File(outputDir, "org/example/PersonGenerated.drl");
         assertTrue(personGeneratedFile.exists());
 
 //        FileUtils.deleteQuietly(personGeneratedFile);

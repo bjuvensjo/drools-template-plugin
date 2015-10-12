@@ -1,5 +1,5 @@
-package com.evry.finance.loanprocess;
-import com.evry.finance.loanprocess.Person
+package org.example;
+import org.example.Person
 dialect  "mvel"
 
 template "Foo"
