@@ -1,0 +1,28 @@
+package com.evry.finance.loanprocess;
+import com.evry.finance.loanprocess.Person
+dialect  "mvel"
+
+template "Foo"
+rule "Foo_@{row}"
+    when 
+        p: Person(sex == @{Sex})
+    then
+        p.setMaturity(p.getAge() < @{Maturity age} ? Person.Maturity.CHILD : Person.Maturity.ADULT);
+end
+end template
+
+rule "Person"
+    when 
+        p: Person(sex == Hen)
+    then
+        p.setMaturity(p.getAge() < 33 ? Person.Maturity.CHILD : Person.Maturity.ADULT);
+end
+
+template "Bar"
+rule "Bar_@{row}"
+    when 
+        p: Person(sex == @{Sex})
+    then
+        p.setMaturity(p.getAge() < @{Maturity age} ? Person.Maturity.CHILD : Person.Maturity.ADULT);
+end
+end template
